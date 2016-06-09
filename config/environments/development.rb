@@ -1,3 +1,11 @@
+# @Author: Ronnie Nyaga <Ronnie>
+# @Date:   2016-06-09T08:43:54+03:00
+# @Email:  ronnienyaga@gmail.com
+# @Last modified by:   Ronnie
+# @Last modified time: 2016-06-09T10:45:19+03:00
+
+
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -38,4 +46,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

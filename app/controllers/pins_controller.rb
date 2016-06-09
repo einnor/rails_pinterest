@@ -1,12 +1,13 @@
 # @Author: Ronnie
 # @Date:   2016-06-09T09:06:25+03:00
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-09T10:39:49+03:00
+# @Last modified time: 2016-06-09T10:57:50+03:00
 
 
 
 class PinsController < ApplicationController
 
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -18,11 +19,11 @@ class PinsController < ApplicationController
   end
 
   def new
-    @pin = Pin.new
+    @pin = current_user.pin.build
   end
 
   def create
-    @pin = Pin.new(pin_params)
+    @pin = current_user.pin.build(pin_params)
     if @pin.save
       redirect_to @pin, notice: "Pin was successfully created"
     else
