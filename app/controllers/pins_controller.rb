@@ -1,14 +1,14 @@
 # @Author: Ronnie
 # @Date:   2016-06-09T09:06:25+03:00
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-09T11:59:52+03:00
+# @Last modified time: 2016-06-09T14:50:30+03:00
 
 
 
 class PinsController < ApplicationController
 
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+  before_action :set_pin, only: [:show, :edit, :update, :destroy, :upvote]
 
   def index
     @pins = Pin.all.order('created_at DESC')
@@ -46,6 +46,11 @@ class PinsController < ApplicationController
   def destroy
     @pin.destroy
     redirect_to root_path, notice: "Pin was successfully deleted"
+  end
+
+  def upvote
+    @pin.upvote_by current_user
+    redirect_to :back
   end
 
 

@@ -2,7 +2,7 @@
 # @Date:   2016-06-09T08:43:54+03:00
 # @Email:  ronnienyaga@gmail.com
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-09T12:15:21+03:00
+# @Last modified time: 2016-06-09T14:31:44+03:00
 
 
 
@@ -40,6 +40,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 # Masonry will rock your world!
 gem 'masonry-rails', '~> 0.2.4'
+# Votes
+gem 'acts_as_votable', '~> 0.10.0'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
