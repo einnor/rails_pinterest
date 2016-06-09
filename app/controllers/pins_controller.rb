@@ -1,7 +1,7 @@
 # @Author: Ronnie
 # @Date:   2016-06-09T09:06:25+03:00
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-09T10:57:50+03:00
+# @Last modified time: 2016-06-09T11:59:52+03:00
 
 
 
@@ -19,11 +19,11 @@ class PinsController < ApplicationController
   end
 
   def new
-    @pin = current_user.pin.build
+    @pin = current_user.pins.build
   end
 
   def create
-    @pin = current_user.pin.build(pin_params)
+    @pin = current_user.pins.build(pin_params)
     if @pin.save
       redirect_to @pin, notice: "Pin was successfully created"
     else
@@ -56,7 +56,7 @@ class PinsController < ApplicationController
   end
 
   def pin_params
-    params.require(:pin).permit(:title, :description)
+    params.require(:pin).permit(:title, :description, :image)
   end
 
 end
