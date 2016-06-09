@@ -1,3 +1,11 @@
+# @Author: Ronnie Nyaga <Ronnie>
+# @Date:   2016-06-09T08:43:54+03:00
+# @Email:  ronnienyaga@gmail.com
+# @Last modified by:   Ronnie
+# @Last modified time: 2016-06-09T12:15:21+03:00
+
+
+
 source 'https://rubygems.org'
 
 
@@ -30,6 +38,9 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Manage user accounts
 gem 'devise', '~> 4.1', '>= 4.1.1'
+# Masonry will rock your world!
+gem 'masonry-rails', '~> 0.2.4'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 

@@ -3,7 +3,7 @@
 * @Date:   2016-06-09T08:43:54+03:00
 * @Email:  ronnienyaga@gmail.com
 * @Last modified by:   Ronnie
-* @Last modified time: 2016-06-09T11:15:14+03:00
+* @Last modified time: 2016-06-09T12:18:32+03:00
 */
 
 
@@ -22,6 +22,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
