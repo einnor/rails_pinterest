@@ -3,27 +3,37 @@
 @Date:   2016-06-09T10:45:41+03:00
 @Email:  ronnienyaga@gmail.com
 @Last modified by:   Ronnie
-@Last modified time: 2016-06-09T11:48:46+03:00
+@Last modified time: 2016-06-09T15:33:19+03:00
 -->
 
 
 
 <div class="col-md-6 col-md-offset-3">
-  <h2>Sign up</h2>
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+        <h2>Sign up</h2>
 
-    <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
-      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-      <%= f.input :password_confirmation, required: true %>
+      </div>
+      <div class="panel-body">
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+            <%= f.input :password_confirmation, required: true %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up" %>
+          </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+  </div>
 </div>
