@@ -1,4 +1,4 @@
-#pin_show.rows
+#pin_show.row
   .col-md-8.col-md-offset-2
     .panel.panel-default
       .panel-heading.pin_image
@@ -7,7 +7,7 @@
         %h1= @pin.title
         %p.description= @pin.description
       .panel-footer
-        .rows
+        .row
           .col-md-6
             %p.user
               Submitted by
@@ -24,3 +24,32 @@
               - if user_signed_in?
                 = link_to "Edit", edit_pin_path, class: 'btn btn-default'
                 = link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'
+
+.row
+  .col-md-8.col-md-offset-2
+    .row
+      .panel.panel-default
+        .panel-body
+          .form-group
+            %input.form-control
+            %button{ type: }
+
+#pin_show.row
+  .col-md-8.col-md-offset-2
+    .row
+      .col-sm-2
+        .thumbnail
+          %h1.text-center
+            %span.glyphicon.glyphicon-user
+      .col-sm-10
+        .panel.panel-default
+          .panel-heading.padding-10
+            %strong
+              Username
+            %span.text-muted
+              Title
+          .panel-body
+            %p.description
+              Sustainable humblebrag bespoke, venmo pork belly cronut ugh actually kitsch direct trade gochujang yuccie. Man braid fixie readymade post-ironic microdosing tousled chartreuse.
+            %span.pull-right.time-ago
+              Commented 5 days ago
