@@ -1,7 +1,7 @@
 # @Author: Ronnie
 # @Date:   2016-06-09T09:06:25+03:00
 # @Last modified by:   Ronnie
-# @Last modified time: 2016-06-09T16:10:23+03:00
+# @Last modified time: 2016-06-11T10:49:18+03:00
 
 
 
@@ -15,7 +15,7 @@ class PinsController < ApplicationController
   end
 
   def show
-
+    @comment = @pin.comments.new
   end
 
   def new
@@ -46,10 +46,6 @@ class PinsController < ApplicationController
   def destroy
     @pin.destroy
     redirect_to root_path, notice: "Pin was successfully deleted"
-  end
-
-  def comment
-
   end
 
   def upvote

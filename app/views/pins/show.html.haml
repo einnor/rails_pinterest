@@ -25,31 +25,38 @@
                 = link_to "Edit", edit_pin_path, class: 'btn btn-default'
                 = link_to "Delete", pin_path, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger'
 
-.row
+#pin_show.row
   .col-md-8.col-md-offset-2
-    .row
-      .panel.panel-default
-        .panel-body
+    .panel.panel-default
+      .panel-body
+        = simple_form_for [@pin, @comment] do |f|
           .form-group
-            %input.form-control
-            %input.btn.btn-primary.pull-right{type: 'submit'}
+            = f.input :title, input_html: { class: 'form-control' }
+          .form-group
+            = f.input :comment, input_html: { class: 'form-control' }
+          = f.submit class: 'btn btn-primary pull-right'
+      .panel-footer
+        %h3.text-center
+          = pluralize(@pin.comments.count, 'comment')
 
 #pin_show.row
   .col-md-8.col-md-offset-2
     .row
-      .col-sm-2
-        .thumbnail
-          %h1.text-center
-            %span.glyphicon.glyphicon-user
-      .col-sm-10
-        .panel.panel-default
-          .panel-heading.padding-10
-            %strong
-              Username
-            %span.text-muted
-              Title
-          .panel-body
-            %p.description
-              Sustainable humblebrag bespoke, venmo pork belly cronut ugh actually kitsch direct trade gochujang yuccie. Man braid fixie readymade post-ironic microdosing tousled chartreuse.
-            %span.pull-right.time-ago
-              Commented 5 days ago
+      - @pin.comments.reject(&:new_record?).each do |comment|
+        .col-sm-2
+          .thumbnail
+            %h1.text-center
+              %span.glyphicon.glyphicon-user
+        .col-sm-10
+          .panel.panel-default
+            .panel-heading.padding-10
+              %strong
+                = comment.user.email
+              %span.text-muted.pull-right
+                = comment.title
+            .panel-body
+              %p.description
+                = comment.comment
+              %span.pull-right.time-ago
+                = time_ago_in_words(comment.created_at)
+                ago
