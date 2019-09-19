@@ -42,7 +42,7 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 # Masonry will rock your world!
 gem 'masonry-rails', '~> 0.2.4'
 # Add Votes
-gem 'acts_as_votable', '~> 0.10.0'
+gem 'acts_as_votable', '~> 0.12.1'
 # Add comments
 gem 'acts_as_commentable', '~> 4.0', '>= 4.0.2'
 # bundle exec rake doc:rails generates the API under doc/api.
