@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.0'
 # HAML
 gem 'haml', '~> 4.0', '>= 4.0.7'
 # Forms made easy
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'simple_form', '~> 4.0'
 # Upload images
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 # Bootstrap sass
