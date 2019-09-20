@@ -38,7 +38,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 # Bootstrap sass
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Manage user accounts
-gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'devise', '~> 4.7'
 # Masonry will rock your world!
 gem 'masonry-rails', '~> 0.2.4'
 # Add Votes
