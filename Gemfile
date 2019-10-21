@@ -30,7 +30,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # HAML
-gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'haml', '~> 5.0'
 # Forms made easy
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # Upload images
